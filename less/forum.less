@@ -1,8 +1,34 @@
-/* HubUi-X Theme */
+/* GreenUi-X Theme */
 @import "common.less";
+
+:root {
+    & when (@config-dark-mode =false) {
+        --muted-color: #212529;
+        --muted-more-color: #4c555e;
+        --all-bg-color: #ffffff;
+        --all-bg-color-hover: #f7f7f7;
+        --text-color: #212529;
+        --green-shadow-box: 0 1px 4px rgba(88, 110, 101, 30%);
+        --button-color: #212529;
+        --header-bg: #ffffff;
+    }
+
+    & when (@config-dark-mode =true) {
+        --muted-color: #e3e3e3;
+        --muted-more-color: #DEDEDE;
+        --all-bg-color: #2c3332;
+        --all-bg-color-hover: #262b2b;
+        --text-color: #e3e3e3;
+        --green-shadow-box: 0 1px 4px rgba(16, 16, 16, 30%);
+        --button-color: #e3e3e3;
+        --header-bg: #2c3332;
+    }
+}
+
 li {
     border-radius: @border-radius !important;
 }
+
 .FlarumBlogOverview .BlogFeatured-list-item,
 .FlarumBlogOverview .BlogFeatured-list-item-top .dataItem,
 .FlarumBlog-Article-Content,
@@ -12,6 +38,7 @@ li {
     border-radius: @border-radius !important;
     box-shadow: unset !important;
 }
+
 .BlogSideWidget {
     border-radius: @border-radius !important;
     box-shadow: unset !important;
@@ -19,153 +46,178 @@ li {
     padding-right: 8px;
     padding-bottom: 8px;
 }
+
 .FlarumBlog-Article-Author-background,
 .FlarumBlogItem .FlarumBlog-Article .FlarumBlog-Article-Container .FlarumBlog-Article-Image {
     border-radius: @border-radius @border-radius 0 0 !important;
     box-shadow: unset !important;
 }
+
 .WelcomeHero {
     color: #fdfdfd;
     background: linear-gradient(160deg, var(--control-bg-shaded), var(--button-primary-bg-hover));
 }
-body, #app .App-content {
+
+body,
+#app .App-content {
     background-color: var(--control-bg-light);
 }
-#drawer, #app-navigation, #header {
-    & when (@config-colored-header = false){
+
+#drawer,
+#app-navigation {
+    & when (@config-colored-header =false) {
         background-color: var(--control-bg-light);
     }
 }
+
 .AfruxWidgets-Widget-content {
-    border-radius: @border-radius;
+    border-radius: @border-radius !important;
+    background: var(--all-bg-color) !important;
+    box-shadow: var(--green-shadow-box);
 }
-.item-like .Button--link .Button-label,.item-dislike .Button--link .Button-label,.item-reply .Button--link .Button-label {
-	display:none;
+
+.Afrux-NewsWidget,
+.AfruxWidgets-Widget-title {
+    color: var(--text-color) !important;
 }
+
+.item-like .Button--link .Button-label,
+.item-dislike .Button--link .Button-label,
+.item-reply .Button--link .Button-label {
+    display: none;
+}
+
 .item-like .Button:before {
-	font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', 'Font Awesome 6 Pro';
-	font-weight: 600;
-	font-size: 14px;
-	content: '\f164';
-	vertical-align: -1px;
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', 'Font Awesome 6 Pro';
+    font-weight: 600;
+    font-size: 14px;
+    content: '\f164';
+    vertical-align: -1px;
 }
+
 .item-dislike .Button:before {
-	font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', 'Font Awesome 6 Pro';
-	font-weight: 600;
-	font-size: 14px;
-	content: '\f165';
-	vertical-align: -3px;
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', 'Font Awesome 6 Pro';
+    font-weight: 600;
+    font-size: 14px;
+    content: '\f165';
+    vertical-align: -3px;
 }
+
 .item-reply .Button--link:before {
-	font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', 'Font Awesome 6 Pro';
-	font-weight: 600;
-	font-size: 15px;
-	content: '\f3e5';
-	margin-right: 4px;
-	vertical-align: -2px;
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', 'Font Awesome 6 Pro';
+    font-weight: 600;
+    font-size: 15px;
+    content: '\f3e5';
+    margin-right: 4px;
+    vertical-align: -2px;
 }
+
 .PostStream {
     border-radius: @border-radius;
     margin-top: 4px;
     padding: 4px 22px 4px 22px;
-    & when (@config-dark-mode = false) {
-        background-color: rgba(255,255,255,1.0);
-    }
-    & when (@config-dark-mode = true) {
-        background-color: rgba(14,14,14,1.0);
-    }
+    background-color: var(--all-bg-color);
+    box-shadow: var(--green-shadow-box);
 }
+
 .PostsUserPage {
     border-radius: @border-radius;
     margin-top: 4px;
     padding: 12px 22px 12px 22px;
-    & when (@config-dark-mode = false) {
-        background-color: rgba(255,255,255,1.0);
-    }
-    & when (@config-dark-mode = true) {
-        background-color: rgba(14,14,14,1.0);
-    }
+    background-color: var(--all-bg-color);
+    box-shadow: var(--green-shadow-box);
 }
+
 .DiscussionListItem {
-    margin: 8px 0px 8px 0px;
+    margin: 15px 0px 15px 0px;
     border-radius: @border-radius !important;
-    & when (@config-dark-mode = false) {
-        background-color: rgba(255,255,255,1.0);
-    }
-    & when (@config-dark-mode = true) {
-        background-color: rgba(14,14,14,1.0);
-    }
+    background-color: var(--all-bg-color);
+    box-shadow: var(--green-shadow-box);
 }
+
 .DiscussionListItem-content {
     border-radius: @border-radius !important;
 }
+
+.DiscussionListItem:hover {
+    background: var(--all-bg-color-hover);
+}
+
 .DiscussionList-loadMore {
     margin-top: 4px;
+
     @media @phone {
         margin: 4px 8px;
     }
+
     .Button {
         width: 100%;
         height: 100%;
     }
 }
+
 aside.DiscussionPage-list {
     padding: 4px;
 }
+
 .Slidable-content {
     margin-top: 4px;
 }
+
 @media @phone {
     .DiscussionListItem {
         margin: 8px;
     }
 }
+
 @media @tablet-up {
     li.item-nav {
         padding: 2px 12px 2px 12px;
         border-radius: @border-radius;
-        & when (@config-dark-mode = false) {
-            background-color: rgba(255,255,255,1.0);
-        }
-        & when (@config-dark-mode = true) {
-            background-color: rgba(14,14,14,1.0);
-        }
+        background-color: var(--all-bg-color);
+        box-shadow: var(--green-shadow-box);
     }
-    .SettingsPage, .UserSecurityPage, .MasqueradeRoot {
+
+    .SettingsPage,
+    .UserSecurityPage,
+    .MasqueradeRoot {
         border-radius: @border-radius;
         margin-top: 4px;
         padding: 12px 22px 12px 22px;
-        & when (@config-dark-mode = false) {
-            background-color: rgba(255,255,255,1.0);
-        }
-        & when (@config-dark-mode = true) {
-            background-color: rgba(14,14,14,1.0);
-        } 
+        background-color: var(--all-bg-color);
+        box-shadow: var(--green-shadow-box);
     }
 }
+
 .Badge {
     opacity: 0.9;
     color: #fff;
 }
-.Hero-close {
-    display: none;
-}
-header.Hero.DiscussionHero, header.Hero.WelcomeHero {
+
+header.Hero.DiscussionHero,
+header.Hero.WelcomeHero {
     border-radius: @border-radius;
 }
-.darkenBackground,.Hero {
+
+.darkenBackground,
+.Hero {
     border-radius: @border-radius;
+    box-shadow: var(--green-shadow-box);
 }
+
 .Hero {
     margin: 12px;
 }
+
 ul.NotificationGroup-content {
     &>li {
         margin: 4px 8px;
+
         &>a {
             &.Notification {
                 border-radius: @border-radius;
             }
+
             &.unread .Notification-title:after {
                 content: '';
                 display: inline-block;
@@ -179,28 +231,54 @@ ul.NotificationGroup-content {
         }
     }
 }
+
 .Composer {
-    border-radius: 12px 12px 0 0;
+    border-radius: 10px 10px 0 0;
 }
+
 .ComposerBody-loading {
-    border-radius: 12px;
+    border-radius: 10px;
 }
-@media (min-width:992px){
-    .TagTiles>li{
+
+.DiscussionListItem-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.DiscussionListItem-info .item-excerpt {
+    margin-right: 10px !important;
+    font-size: 14px !important;
+    color: var(--muted-color) !important;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media (min-width:992px) {
+    .TagTiles>li {
         width: 30% !important;
         border-radius: @border-radius !important;
         margin: 15px;
     }
+
+    .sideNav {
+        margin-right: 30px;
+    }
 }
-@media (max-width:991px) and (min-width:768px){
-    .TagTiles>li{
+
+@media (max-width:991px) and (min-width:768px) {
+    .TagTiles>li {
         width: 45% !important;
         border-radius: @border-radius !important;
         margin: 15px;
     }
 }
-@media (max-width: 767px){
-    .TagTiles>li{
+
+@media (max-width: 767px) {
+    .TagTiles>li {
         border-radius: @border-radius !important;
         margin: 15px;
     }
