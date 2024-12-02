@@ -3,5 +3,5 @@
   
 ## Install
 ```
-composer require kk14569/flarum-hubui-x
+composer require stezkoy/flarum-greenui-x
 ```
