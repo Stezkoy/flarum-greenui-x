@@ -2,7 +2,7 @@
     "name": "stezkoy/flarum-greenui-x",
     "description": "A modern and soft theme designed by Stezkoy for Flarum. Fork flarum-hubui-x by kk14569",
     "type": "flarum-extension",
-    "version": "v2.2.6",
+    "version": "v2.2.7",
     "license": "GPL-3.0",
     "require": {
         "flarum/core": "^1.8.0"
