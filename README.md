@@ -12,18 +12,18 @@ Core Configuration - Appearance
 _Primary Color:_ #00a185  
 _Secondary Color:_ #2e2e2e
 
-#### Plugins in the screenshot
+### Plugins in the screenshot
 
-##### Header  
-FoF Links  
-FoF Night Mode  
+#### Header  
+- FoF Links  
+- FoF Night Mode  
 
-##### Body  
-Forum Widgets  
-Hot Discussions  
-Forum Stats Widget  
-Online Users Widget  
-News Widget  
+#### Body  
+- Forum Widgets  
+- Hot Discussions  
+- Forum Stats Widget  
+- Online Users Widget  
+- News Widget  
 
 
 ## Install  
