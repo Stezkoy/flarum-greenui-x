@@ -233,7 +233,7 @@ aside.DiscussionPage-list {
     background-size: cover;
 }
 
-.FormControl[type=text]{
+.FormControl[type=text] {
     font-size: 14px !important;
 }
 
@@ -245,7 +245,9 @@ aside.DiscussionPage-list {
     color: var(--text-color) !important;
 }
 
-.emojionearea-category-title, .emojionearea-picker, .emojionearea-filters {
+.emojionearea-category-title,
+.emojionearea-picker,
+.emojionearea-filters {
     background: var(--control-bg-light) !important;
 }
 
@@ -277,7 +279,8 @@ header.Hero.WelcomeHero {
     margin: 12px;
 }
 
-.fancybox-gallery, a[data-fancybox="single"]>img {
+.fancybox-gallery,
+a[data-fancybox="single"]>img {
     border: 1px solid var(--control-bg-light) !important;
 }
 
@@ -353,6 +356,11 @@ ul.NotificationGroup-content {
         width: 45% !important;
         border-radius: @border-radius !important;
         margin: 15px;
+    }
+
+    .Composer:not(.fullScreen) {
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 
